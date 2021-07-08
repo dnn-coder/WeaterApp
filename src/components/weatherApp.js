@@ -22,7 +22,6 @@ useEffect (()=> {
    if(latitud && longitud ){
     const request = async () => {
         const API_KEY = '0b36cd09effe4f34995215908210707'
-        // let url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURI(latitud)},${encodeURI(longitud)}&aqi=no`;
         let url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURI(latitud)},${encodeURI(longitud)}&aqi=no`;
         const response = await fetch(url).then(res => res.json())
         setData(response) 
